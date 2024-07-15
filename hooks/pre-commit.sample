@@ -1,0 +1,10 @@
+#!/bin/sh
+
+# Apply google style using Spotless
+gradle spotlessApply
+
+# Format staged Java files using google-java-format
+java -jar tools/google-java-format-1.21.0-all-deps.jar -i $(git diff --cached --name-only --diff-filter=ACM -- '*.java' | xargs)
+
+# Add formatted files back to the index
+git add $(git diff --cached --name-only --diff-filter=ACM -- '*.java' | xargs)
