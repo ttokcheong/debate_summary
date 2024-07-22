@@ -1,4 +1,4 @@
-package com.ttokcheong.debate_summary.modules.election.domain;
+package com.ttokcheong.debatesummary.modules.election.domain;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
