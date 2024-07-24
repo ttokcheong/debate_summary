@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<th:block th:fragment="topbar">
+  <nav class="navbar navbar-inverse">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse"
+                data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">똑똑한 청년</a>
+      </div>
+      <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li th:classappend="${module == 'home' ? 'active' : ''}">
+            <a href="#" th:href="@{/}">Home</a>
+          </li>
+          <li th:classappend="${module == 'election' ? 'active' : ''}">
+            <a href="#" th:href="@{/election-types}">선거</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</th:block>
+</html>
